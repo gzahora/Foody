@@ -1,0 +1,14 @@
+.jumbotron{
+  background-image: url("/Users/aidayrysbekova/Desktop/code/Project-1/assets/images/jumbotronimage.jpeg");
+  background-position: 100%;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  color:white;
+  font-style:bold;
+  font-family: 'Squada One', cursive;
+
+}
+.card{
+  position: fixed;
+  position: center;
+}
