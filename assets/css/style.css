@@ -1,5 +1,9 @@
-.jumbotron{
+body{
   background-image: url("/Users/aidayrysbekova/Desktop/code/Project-1/assets/images/jumbotronimage.jpeg");
+
+}
+.jumbotron{
+  background-color: rgb(46, 102, 46);
   background-position: 100%;
   background-repeat: no-repeat; 
   background-size: cover; 
@@ -10,4 +14,11 @@
 }
 #footer{
 text-align: center;
+color:black;
+}
+.card1{
+  background-color:rgb(84, 190, 84, 0.3);
+  color:white;
+  font-style: bolder;
+  font-size:18px;
 }
