@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--reset.css link-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--own style.css link-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-light">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="bread" id="input-pantry">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" id="add-pantry">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Ingredients</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bread <button class="btn btn-primary" id="ing">settings</button> <button
+                                            class="btn btn-danger" id="delete">remove</button> </td>
+                                </tr>
+                                <tr>
+                                    <td>butter <button class="btn btn-primary" id="ing">settings</button> <button
+                                            class="btn btn-danger" id="delete">remove</button> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-lg btn-primary">Lets Cook!</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td> <button class="btn btn-secondary btn-block" id="">Sandwhich</button> 
+                                </tr>
+                                <tr>
+                                    <td> <button class="btn btn-secondary btn-block" id="">Ceasers Salad</button> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Placing scripts at the bottom of the <body> element improves the display speed, because script interpretation slows down the display.-->
+    <!--jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!--my own js-->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!--this bit is the firebase CDN you need them both...i think-->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+</body>
+
+</html>
