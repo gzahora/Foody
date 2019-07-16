@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <html lang="en" dir="ltr">
 
 
@@ -30,35 +30,50 @@
                       <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
                     </div>
                   </div>
-        <div class="container">
-            <div id="pantryButtons"></div>
-        </div>
-    
-        <div class="container">
-            <form id="ingredientSearch">
-                <label for="addInput">Add an item to the pantry: </label>
-                <input type="text" id="addInput"> 
-                <input id="addButton" type="submit" value="Submit">
-                <br><br>
-            </form>
-            <br>
-        </div>
-    
-        <div class="container">
-            <div id=ingredientDisplay></div>
+ 
+<!-- ---------------------------------------------- -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div class="row">
+                    <div id="pantryButtons"></div>
+                </div>
+                <div class="row">
+                    <form id="ingredientSearch">
+                        <label for="addInput">Add an item to the pantry: </label>
+                        <input type="text" id="addInput">
+                        <input id="addButton" type="submit" value="Submit">
+                        <br><br>
+                    </form>
+                    <br>
+                </div>
+
+                <div class="row" style="border-style: solid; border-width: 2px; border-block-color: black">
+                    <div id=ingredientDisplay>
+                        <input id="findRecipe" type="submit" value="Submit">
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+
+            <div class="col-5" id=recipeDisplay></div>
         </div>
 
 
-      <script type="text/javascript" src="assets/javascript/app.js"></script>
-    </body>
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-        <a class="navbar-brand"></a>
-        <p>Greg Zahora Pamir Jantaev Lucas Foulkes Aida Yrysbekova</p>
-        <br> 
-        <br>
-        <p>Copyright 2019</p>
-        <br>
-        <br>
-        <p>All rights reserved</p>
-      </nav>
-  </html>
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+    <a class="navbar-brand"></a>
+    <p>Greg Zahora Pamir Jantaev Lucas Foulkes Aida Yrysbekova</p>
+    <br> 
+    <br>
+    <p>Copyright 2019</p>
+    <br>
+    <br>
+    <p>All rights reserved</p>
+  </nav>
+</html>
+
+</html>
