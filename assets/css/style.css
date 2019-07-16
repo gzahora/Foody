@@ -1,5 +1,5 @@
 .jumbotron{
-  background-image: url("/Users/aidayrysbekova/Desktop/code/Project-1/assets/images/jumbotronimage.jpeg");
+  background-image: url("../images/jumbotronimage.jpeg");
   background-position: 100%;
   background-repeat: no-repeat; 
   background-size: cover; 

@@ -42,16 +42,12 @@ $(document).on("click",".pantryButton", function(){
 
 
 //-----------code for using the Edamam App------------------ 
-//var ingredients = "chicken,tomato,bread"
-
-
-//-------------------------------------------------------------------------------------------------------
-
 
 
 //on click to take "meal" and insert them as ingredients into the query search
 $(document).on("click","#findRecipe", function(){
     var queryURL = "https://api.edamam.com/search?q=" + meal + "&app_id=b9932fef&app_key=351d24d69e849db0f8fe16f88161a9e7&from=0&to=8";
+    $("#recipeDisplay").empty();
 console.log(queryURL);
 
 //Ajax call for Edamam API
@@ -61,11 +57,23 @@ $.ajax({
 }).then(function(response) {
     console.log(response);
 
+
     for(var i = 0; i < response.hits.length; i++){
-        $("#recipeDisplay").append("<img class='m-2' src='" + response.hits[i].recipe.image + "'<img>")
+        //var recipeContainer = $("<div class='card'>");
+        //$("#recipeDisplay").append(recipeContainer);
+        //$(recipeContainer).append("<img src='" + response.hits[i].recipe.image + "'<img>")
+        //$(recipeContainer).append("<div class='card-body><h5 class='card-title" + response.hits[i].recipe.label + "</h5></div>")
+      //}
+  
+
+var recipeContainer = $("<div style='display: inline-block'><div class='card m-1' style='width: 18rem;'><img src='" + response.hits[i].recipe.image + "'class='card-img-top'><div class='card-body'><h5 class='card-title'>'" + response.hits[i].recipe.label + "'</h5><p class='card-text'> Calories: " + response.hits[i].recipe.calories + "</p><p class='card-text'> Serving-Size: " + response.hits[i].recipe.yield + "</p><p class='card-text'> Source: " + response.hits[i].recipe.source + "</p></div><div class='card-body'><a href='" + response.hits[i].recipe.url + "'class='card-link btn btn-primary'>Recipe</a></div></div></div>"
+)
+$("#recipeDisplay").append(recipeContainer);
     }
 });
 
 });
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 pantryButtons();
