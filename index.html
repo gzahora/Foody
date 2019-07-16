@@ -15,17 +15,30 @@
     <title>Document</title>
 </head>
 
-<body class="bg-light">
+<body>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Foody</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
                 <div class="row">
                     <div class="col">
+                        <div id="pantryButtons"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="bread" id="input-pantry">
+                            <input type="text" class="form-control" placeholder="bread" val="">
                             <div class="input-group-append">
-                                <button class="btn btn-success" id="add-pantry">+</button>
+                                <button class="btn btn-success" id="addButton">+</button>
                             </div>
                         </div>
                     </div>
@@ -38,15 +51,7 @@
                                     <th scope="col">Ingredients</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>bread <button class="btn btn-primary" id="ing">settings</button> <button
-                                            class="btn btn-danger" id="delete">remove</button> </td>
-                                </tr>
-                                <tr>
-                                    <td>butter <button class="btn btn-primary" id="ing">settings</button> <button
-                                            class="btn btn-danger" id="delete">remove</button> </td>
-                                </tr>
+                            <tbody id="ing-to-cook">
                             </tbody>
                         </table>
                     </div>
@@ -63,10 +68,10 @@
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <td> <button class="btn btn-secondary btn-block" id="">Sandwhich</button> 
+                                    <td> <button class="btn btn-secondary btn-block" id="">Sandwhich</button>
                                 </tr>
                                 <tr>
-                                    <td> <button class="btn btn-secondary btn-block" id="">Ceasers Salad</button> 
+                                    <td> <button class="btn btn-secondary btn-block" id="">Ceasers Salad</button>
                                 </tr>
                             </tbody>
                         </table>
@@ -76,7 +81,14 @@
         </div>
     </div>
 
+    <footer class="page-footer bg-light text-center">
 
+        <p>Greg Zahora Pamir Jantaev Lucas Foulkes Aida Yrysbekova</p>
+
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:</div>
+
+        <p>All rights reserved</p>
+    </footer>
 
 
 
