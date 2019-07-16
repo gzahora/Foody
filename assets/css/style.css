@@ -1,5 +1,9 @@
-.jumbotron{
+body{
   background-image: url("../images/jumbotronimage.jpeg");
+
+}
+.jumbotron{
+  background-color: rgb(46, 102, 46);
   background-position: 100%;
   background-repeat: no-repeat; 
   background-size: cover; 
@@ -8,10 +12,13 @@
   font-family: 'Squada One';
 
 }
-#delete-from-fridge{
-  border-radius: 2em;
-  float: right;
+#footer{
+text-align: center;
+color:black;
 }
-h4{
-  margin:0px;
+.card1{
+  background-color:rgb(84, 190, 84, 0.3);
+  color:white;
+  font-style: bolder;
+  font-size:18px;
 }
