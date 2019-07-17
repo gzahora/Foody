@@ -1,3 +1,7 @@
+body, 
+html {
+  height:100%;
+}
 body{
   background-image: url("../images/jumbotronimage.jpeg");
 
@@ -21,4 +25,11 @@ color:black;
   color:white;
   font-style: bolder;
   font-size:18px;
+}
+#delete-from-fridge{
+  float: right;
+}
+.control-top{
+  height: 3em;
+  background:red;
 }
