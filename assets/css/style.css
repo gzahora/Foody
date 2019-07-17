@@ -37,3 +37,8 @@ body{
 #recipeDisplay{
   margin-bottom: 80px;
 }
+#next,
+#prev {
+  width:3em;
+  border-radius: 1em;
+}
