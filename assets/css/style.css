@@ -4,6 +4,9 @@ html {
 }
 body{
   background-image: url("../images/jumbotronimage.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
 }
 .head {
