@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-body,html {
-  height: 100%;
-}
-=======
 body{
   background-image: url("../images/jumbotronimage.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
->>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
-
+}
 .container {
   position: relative;
   top: 50%;
@@ -21,7 +15,6 @@ body{
   border-radius: 2em;
   margin: 0.25em;
 }
-<<<<<<< HEAD
 h3 {
   margin: 0px;
 }
@@ -47,8 +40,7 @@ h4 {
 }
 #play-start-button{
   width: auto;
-
-=======
+}
 .myFooter{
   background-color: rgb(46, 102, 46);
   color:white;
@@ -82,5 +74,4 @@ h4 {
 }
 #recipeDisplay {
   background-color:rgb(84, 190, 84, 0.3);
->>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
 }
