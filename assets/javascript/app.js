@@ -73,7 +73,7 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response);
             for (var i = 0; i < response.hits.length; i++) {
-                var recipeContainer = "<div class='card m-1 d-block w-100 ' style='width: 18rem; '><img src='" + response.hits[i].recipe.image + "'class='card-img-top'><div class='card-body'><h5 class='card-title'>'" + response.hits[i].recipe.label + "'</h5><p class='card-text'> Calories: " + Math.round(response.hits[i].recipe.calories) + "</p><p class='card-text'> Serving-Size: " + response.hits[i].recipe.yield + "</p><p class='card-text'> Source: " + response.hits[i].recipe.source + "</p></div><div class='card-body'><a href='" + response.hits[i].recipe.url + "'  target='_blank' class='card-link btn btn-primary'>Recipe</a></div></div>";
+                var recipeContainer = "<div class='card m-1 d-block w-100 ' style='width: 18rem; '><img src='" + response.hits[i].recipe.image + "'class='card-img-top'><div class='card-body'><h5 class='card-title'>'" + response.hits[i].recipe.label + "'</h5><p class='card-text'> Calories: " + Math.round(response.hits[i].recipe.calories) + "</p><p class='card-text'> Serving-Size: " + response.hits[i].recipe.yield + "</p><p class='card-text'> Source: " + response.hits[i].recipe.source + "</p></div><div class='card-body'><a href='" + response.hits[i].recipe.url + "'  target='_blank' class='card-link btn btn-danger'>Recipe</a></div></div>";
                 recipeList.push(recipeContainer);
             }
             $("#recipeDisplay").append("<button class='btn btn-light' id='prev'>&#x2190</button>");
@@ -81,6 +81,31 @@ $(document).ready(function () {
             $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
             console.log(pointer);
         });
+
+        $("#musicDisplay").empty();
+
+        var youtubeKey = "AIzaSyBAfUGa2aYPYpeGNqgvVZobAK1o3OkK5fc";
+        var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + meal + ",songs&type=video&videoCategoryId=10&videoCategoryId=song&type=video&key=" + youtubeKey;
+        console.log(youtubeURL);  
+
+        $.ajax({
+            url: youtubeURL,
+            method: "GET"
+        }).then(function (action) {
+            console.log(action);
+            
+
+            
+
+            var musicPlayer = $("<iframe width='420' height='315' src=https://www.youtube.com/embed/" + action.items[0].id.videoId + "?playlist=" + action.items[0].id.videoId + "&loop=1></iframe>")
+            
+               
+                $("#musicDisplay").append(musicPlayer);
+            
+   
+        });
+
+
     });
     $(document).on("click", "#next", function () {
         if (pointer < 7) {
@@ -109,8 +134,18 @@ $(document).ready(function () {
         $("#recipeDisplay").append(recipeList[pointer]);
         $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
 
+<<<<<<< HEAD
     })
 
     pantryButtons();
 
 })
+=======
+//---------------------Ajax call for Youtube API--------------------------------------------------------------------------------------------------------------------
+
+
+
+    });
+        pantryButtons();
+});
+>>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f

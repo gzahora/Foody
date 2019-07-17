@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 body,html {
   height: 100%;
 }
+=======
+body{
+  background-image: url("../images/jumbotronimage.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+>>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
 
 .container {
   position: relative;
@@ -13,6 +21,7 @@ body,html {
   border-radius: 2em;
   margin: 0.25em;
 }
+<<<<<<< HEAD
 h3 {
   margin: 0px;
 }
@@ -39,4 +48,39 @@ h4 {
 #play-start-button{
   width: auto;
 
+=======
+.myFooter{
+  background-color: rgb(46, 102, 46);
+  color:white;
+  text-align: center;
+  bottom:0;
+  width:100%;
+}
+.myPantry{
+  background-color:rgb(84, 190, 84, 0.3);
+  color:white;
+  font-style: bolder;
+  font-family: 'Indie Flower', cursive;
+  font-size:20px;
+}
+#delete-from-fridge{
+  float: right;
+}
+.control-top{
+  height: 3em;
+  background:red;
+}
+#recipeDisplay{
+  margin-bottom: 80px;
+}
+#prev {
+  width:3em;
+  border-radius: 1em;
+}
+.recipies{
+  background-color:rgb(84, 190, 84, 0.3);
+}
+#recipeDisplay {
+  background-color:rgb(84, 190, 84, 0.3);
+>>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
 }
