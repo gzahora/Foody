@@ -42,3 +42,9 @@ body{
   width:3em;
   border-radius: 1em;
 }
+.recipies{
+  background-color:rgb(84, 190, 84, 0.3);
+}
+#recipeDisplay {
+  background-color:rgb(84, 190, 84, 0.3);
+}
