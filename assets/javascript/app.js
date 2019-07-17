@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("hello world");
     //-----------code to make the ingredient buttons and display them----------------------
     //Initial Array of Ingredients
     var pantry = ["eggs", "milk", "bread", "chicken", "onion"];
@@ -9,15 +8,15 @@ $(document).ready(function () {
 
     // Function for displaying buttons that first clears the div holding the buttons, then re-adds what is in the pantry array
     function pantryButtons() {
-        $("#pantryButtons").empty();
+        $("#pantry-buttons").empty();
         for (var i = 0; i < pantry.length; i++) {
-            $("#pantryButtons").append("<button class='btn btn-info m-2 pantryButton' data-name='" + pantry[i] + "'>" + pantry[i] + "</button>");
+            $("#pantry-buttons").append("<button class='btn btn-info m-2 pantryButton' data-name='" + pantry[i] + "'>" + pantry[i] + "</button>");
         }
     };
 
     //function to add a new ingredient to the pantry buttons after typing it in the input box
     //lucas added input verificatino, maybe add a message thru modals 
-    $("#addButton").on("click", function (event) {
+    $("#add-button").on("click", function (event) {
         var button = $("input").val().trim();
         if (pantry.indexOf(button) === -1 && button !== "") {
             $("input").val("");
@@ -61,8 +60,8 @@ $(document).ready(function () {
 
     //on click to take "meal" and insert them as ingredients into the query search
     $(document).on("click", "#findRecipe", function () {
-        var queryURL = "https://api.edamam.com/search?q=" + meal + "&app_id=b9932fef&app_key=351d24d69e849db0f8fe16f88161a9e7&from=0&to=8";
         $("#recipeDisplay").empty();
+        var queryURL = "https://api.edamam.com/search?q=" + meal + "&app_id=b9932fef&app_key=351d24d69e849db0f8fe16f88161a9e7&from=0&to=8";
         console.log(queryURL);
 
         //Ajax call for Edamam API
@@ -81,13 +80,16 @@ $(document).ready(function () {
                 //}
 
 
-                var recipeContainer = $("<div style='display: inline-block'><div class='card m-1' style='width: 18rem;'><img src='" + response.hits[i].recipe.image + "'class='card-img-top'><div class='card-body'><h5 class='card-title'>'" + response.hits[i].recipe.label + "'</h5><p class='card-text'> Calories: " + response.hits[i].recipe.calories + "</p><p class='card-text'> Serving-Size: " + response.hits[i].recipe.yield + "</p><p class='card-text'> Source: " + response.hits[i].recipe.source + "</p></div><div class='card-body'><a href='" + response.hits[i].recipe.url + "'class='card-link btn btn-primary'>Recipe</a></div></div></div>"
+                var recipeContainer = $("<div class='card m-1 d-block w-100' style='width: 18rem; '><img src='" + response.hits[i].recipe.image + "'class='card-img-top'><div class='card-body'><h5 class='card-title'>'" + response.hits[i].recipe.label + "'</h5><p class='card-text'> Calories: " + response.hits[i].recipe.calories + "</p><p class='card-text'> Serving-Size: " + response.hits[i].recipe.yield + "</p><p class='card-text'> Source: " + response.hits[i].recipe.source + "</p></div><div class='card-body'><a href='" + response.hits[i].recipe.url + "'class='card-link btn btn-primary'>Recipe</a></div></div>"
                 )
+            
+               
                 $("#recipeDisplay").append(recipeContainer);
             }
         });
 
-    });
 
+    });
     pantryButtons();
+
 })
