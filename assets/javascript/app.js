@@ -5,7 +5,8 @@ $(document).ready(function () {
 
     //empty array to put meal ingredients in
     var meal = [];
-
+    var pointer = 0;
+    var recipeList = [];
     // Function for displaying buttons that first clears the div holding the buttons, then re-adds what is in the pantry array
     function pantryButtons() {
         $("#pantry-buttons").empty();
@@ -33,7 +34,7 @@ $(document).ready(function () {
             console.log(food);
             var target = $("#ing-to-cook")
             var helper = $("<tr id='" + food + "-id'>");
-            helper.append("<td>" + food + "<button class='btn btn-danger' id='delete-from-fridge' data='" + food + "'><h4>-</h4></button> </td>");
+            helper.append("<td>" + food + "<button class='btn btn-danger' id='delete-from-fridge' data='" + food + "'>-</button> </td>");
             //push ingredient into array
             target.append(helper);
             meal.push(food);
@@ -70,23 +71,42 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response);
-
-
             for (var i = 0; i < response.hits.length; i++) {
-                //var recipeContainer = $("<div class='card'>");
-                //$("#recipeDisplay").append(recipeContainer);
-                //$(recipeContainer).append("<img src='" + response.hits[i].recipe.image + "'<img>")
-                //$(recipeContainer).append("<div class='card-body><h5 class='card-title" + response.hits[i].recipe.label + "</h5></div>")
-                //}
-
-
-                var recipeContainer = $("<div class='card m-1 d-block w-100' style='width: 18rem; '><img src='" + response.hits[i].recipe.image + "'class='card-img-top'><div class='card-body'><h5 class='card-title'>'" + response.hits[i].recipe.label + "'</h5><p class='card-text'> Calories: " + response.hits[i].recipe.calories + "</p><p class='card-text'> Serving-Size: " + response.hits[i].recipe.yield + "</p><p class='card-text'> Source: " + response.hits[i].recipe.source + "</p></div><div class='card-body'><a href='" + response.hits[i].recipe.url + "'class='card-link btn btn-primary'>Recipe</a></div></div>"
-                )
-            
-               
-                $("#recipeDisplay").append(recipeContainer);
+                var recipeContainer = "<div class='card m-1 d-block w-100 ' style='width: 18rem; '><img src='" + response.hits[i].recipe.image + "'class='card-img-top'><div class='card-body'><h5 class='card-title'>'" + response.hits[i].recipe.label + "'</h5><p class='card-text'> Calories: " + Math.round(response.hits[i].recipe.calories) + "</p><p class='card-text'> Serving-Size: " + response.hits[i].recipe.yield + "</p><p class='card-text'> Source: " + response.hits[i].recipe.source + "</p></div><div class='card-body'><a href='" + response.hits[i].recipe.url + "'  target='_blank' class='card-link btn btn-primary'>Recipe</a></div></div>";
+                recipeList.push(recipeContainer);
             }
+            $("#recipeDisplay").append("<button class='btn btn-light' id='prev'>&#x2190</button>");
+            $("#recipeDisplay").append(recipeList[pointer]);
+            $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
+            console.log(pointer);
         });
+    });
+    $(document).on("click", "#next", function () {
+        if (pointer < 7) {
+            pointer++;
+        }
+        else {
+            pointer = 0;
+        };
+        console.log(pointer);
+        $("#recipeDisplay").empty()
+        $("#recipeDisplay").append("<button class='btn btn-light' id='prev'>&#x2190</button>");
+        $("#recipeDisplay").append(recipeList[pointer]);
+        $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
+
+    })
+    $(document).on("click", "#prev", function () {
+        if (pointer > 1) {
+            pointer--;
+        }
+        else {
+            pointer = 7;
+        };
+        console.log(pointer);
+        $("#recipeDisplay").empty()
+        $("#recipeDisplay").append("<button class='btn btn-light' id='prev'>&#x2190</button>");
+        $("#recipeDisplay").append(recipeList[pointer]);
+        $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
 
 //---------------------Ajax call for Spotify API--------------------------------------------------------------------------------------------------------------------
 //---------------------Ajax call for Spotify API--------------------------------------------------------------------------------------------------------------------
