@@ -1,44 +1,42 @@
-body, 
-html {
-  height:100%;
+body,html {
+  height: 100%;
 }
-body{
-  background-image: url("../images/jumbotronimage.jpeg");
 
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.head {
-  background-color: rgb(46, 102, 46);
-  color:white;
-  font-style:bolder;
-  font-family: 'Indie Flower', cursive;
 
+.btn {
+  width: 8em;
+  border-radius: 2em;
+  margin: 0.25em;
 }
-.myFooter{
-  background-color: rgb(46, 102, 46);
-  color:white;
-  text-align: center;
-  bottom:0;
-  width:100%;
+h3 {
+  margin: 0px;
 }
-.myPantry{
-  background-color:rgb(84, 190, 84, 0.3);
-  color:white;
-  font-style: bolder;
-  font-family: 'Indie Flower', cursive;
-  font-size:20px;
+h1 {
+  margin: 0px;
+  padding: 0.1em;
 }
-#delete-from-fridge{
-  float: right;
+h2 {
+  margin: 0px;
+  padding: 0.4em;
 }
-.control-top{
-  height: 3em;
-  background:red;
+h4 {
+  margin:0px;
 }
-#recipeDisplay{
-  margin-bottom: 80px;
+#return {
+  width: auto;
 }
-#next,
-#prev {
-  width:3em;
-  border-radius: 1em;
+#game-moves {
+  padding: 0.5em;
+}
+#rock, #paper, #scissors {
+  margin:0.25em;
+}
+#play-start-button{
+  width: auto;
+
 }

@@ -11,7 +11,7 @@ $(document).ready(function () {
     function pantryButtons() {
         $("#pantry-buttons").empty();
         for (var i = 0; i < pantry.length; i++) {
-            $("#pantry-buttons").append("<button class='btn btn-danger m-2 pantryButton' data-name='" + pantry[i] + "'>" + pantry[i] + "</button>");
+            $("#pantry-buttons").append("<button class='btn btn-info m-2 pantryButton' data-name='" + pantry[i] + "'>" + pantry[i] + "</button>");
         }
     };
 
@@ -65,7 +65,8 @@ $(document).ready(function () {
         var queryURL = "https://api.edamam.com/search?q=" + meal + "&app_id=b9932fef&app_key=351d24d69e849db0f8fe16f88161a9e7&from=0&to=8";
         console.log(queryURL);
 
-//----------------------Ajax call for Edamam API----------------------------------------------------------------------------------------------------------
+
+        //Ajax call for Edamam API
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -108,34 +109,8 @@ $(document).ready(function () {
         $("#recipeDisplay").append(recipeList[pointer]);
         $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
 
-//---------------------Ajax call for Spotify API--------------------------------------------------------------------------------------------------------------------
-//---------------------Ajax call for Spotify API--------------------------------------------------------------------------------------------------------------------
+    })
 
-        $("#musicDisplay").empty();
+    pantryButtons();
 
-        //GET https://www.googleapis.com/youtube/v3/search?part=snippet&q=spanish&key=[YOUR_API_KEY] HTTP/1.1
-
-        var youtubeKey = "AIzaSyBAfUGa2aYPYpeGNqgvVZobAK1o3OkK5fc";
-        var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + meal + ",songs&type=video&videoCategoryId=10&videoCategoryId=song&type=video&key=" + youtubeKey;
-        console.log(youtubeURL);  
-
-        $.ajax({
-            url: youtubeURL,
-            method: "GET"
-        }).then(function (action) {
-            console.log(action);
-            
-
-            
-
-            var musicPlayer = $("<iframe width='420' height='315' src=https://www.youtube.com/embed/" + action.items[0].id.videoId + "?playlist=" + action.items[0].id.videoId + "&loop=1></iframe>")
-            //var musicPlayer = $("<iframe width='420' height='345' src='https://www.youtube.com/embed/rxp_h3GSpas?playlist=rxp_h3GSpas&loop=1'></iframe>")
-            
-               
-                $("#musicDisplay").append(musicPlayer);
-            
-   
-        });
-    });
-        pantryButtons();
 })
