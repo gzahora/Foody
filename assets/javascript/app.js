@@ -80,6 +80,32 @@ $(document).ready(function () {
             $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
             console.log(pointer);
         });
+
+        $("#musicDisplay").empty();
+
+        var youtubeKey = "AIzaSyBAfUGa2aYPYpeGNqgvVZobAK1o3OkK5fc";
+        var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + meal + ",songs&type=video&videoCategoryId=10&videoCategoryId=song&type=video&key=" + youtubeKey;
+        console.log(youtubeURL);  
+
+        $.ajax({
+            url: youtubeURL,
+            method: "GET"
+        }).then(function (action) {
+            console.log(action);
+            
+
+            
+
+            var musicPlayer = $("<iframe width='420' height='315' src=https://www.youtube.com/embed/" + action.items[0].id.videoId + "?playlist=" + action.items[0].id.videoId + "&loop=1></iframe>")
+            //var musicPlayer = $("<iframe width='420' height='345' src='https://www.youtube.com/embed/rxp_h3GSpas?playlist=rxp_h3GSpas&loop=1'></iframe>")
+            
+               
+                $("#musicDisplay").append(musicPlayer);
+            
+   
+        });
+
+
     });
     $(document).on("click", "#next", function () {
         if (pointer < 7) {
@@ -108,34 +134,10 @@ $(document).ready(function () {
         $("#recipeDisplay").append(recipeList[pointer]);
         $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
 
-//---------------------Ajax call for Spotify API--------------------------------------------------------------------------------------------------------------------
-//---------------------Ajax call for Spotify API--------------------------------------------------------------------------------------------------------------------
+//---------------------Ajax call for Youtube API--------------------------------------------------------------------------------------------------------------------
 
-        $("#musicDisplay").empty();
 
-        //GET https://www.googleapis.com/youtube/v3/search?part=snippet&q=spanish&key=[YOUR_API_KEY] HTTP/1.1
 
-        var youtubeKey = "AIzaSyBAfUGa2aYPYpeGNqgvVZobAK1o3OkK5fc";
-        var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + meal + ",songs&type=video&videoCategoryId=10&videoCategoryId=song&type=video&key=" + youtubeKey;
-        console.log(youtubeURL);  
-
-        $.ajax({
-            url: youtubeURL,
-            method: "GET"
-        }).then(function (action) {
-            console.log(action);
-            
-
-            
-
-            var musicPlayer = $("<iframe width='420' height='315' src=https://www.youtube.com/embed/" + action.items[0].id.videoId + "?playlist=" + action.items[0].id.videoId + "&loop=1></iframe>")
-            //var musicPlayer = $("<iframe width='420' height='345' src='https://www.youtube.com/embed/rxp_h3GSpas?playlist=rxp_h3GSpas&loop=1'></iframe>")
-            
-               
-                $("#musicDisplay").append(musicPlayer);
-            
-   
-        });
     });
         pantryButtons();
-})
+});
