@@ -13,20 +13,34 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--own style.css link-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- google fonts and favicon -->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/images/favicon.png"/>
-    <title>Foody</title>
+    <title>Document</title>
 </head>
 
 <body>
 
-    <div class="jumbotron p-1 head">
+    <div class="jumbotron">
         <div class="container">
             <h1 class="display-4">Foody</h1>
-            <p class="lead">Add text here!!!!</p>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
     </div>
+<<<<<<< HEAD
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="pantry-buttons"></div>
+                                <br>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="bread" val="">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-success" id="add-button">+</button>
+=======
     <div class="row">
         <div class="col-6">
             <div class="card myPantry">
@@ -60,16 +74,35 @@
                                             <tbody id="ing-to-cook">
                                             </tbody>
                                         </table>
+>>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
                                     </div>
                                 </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Ingredients</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ing-to-cook">
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div id="musicDisplay"></div>
                         </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
+            <div class="col-6">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <button class="btn btn-lg btn-primary" id="findRecipe">Lets Cook!</button>
+                                <br>
+                                <br>
+                                <div class="d-flex justify"   id="recipeDisplay"></div>
+                            </div>
+=======
         </div>
         <div class="col-6">
             <div class="row">
@@ -80,12 +113,21 @@
                             <br>
                             <br>
                             <div class="d-flex justify-content-around" id="recipeDisplay"></div>
+>>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+
+    <footer class="page-footer bg-light text-center">
+
+        <p>Greg Zahora Pamir Jantaev Lucas Foulkes Aida Yrysbekova</p>
+
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:</div>
+=======
 <div class="footer fixed-bottom myFooter">
     <div id="stickyFooter">
         <p>Greg Zahora Pamir Jantaev Lucas Foulkes Aida Yrysbekova <br>
@@ -93,8 +135,14 @@
             All rights reserved</p>
     </div>
 </div>
+>>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
 
-<!--Placing scripts at the bottom of the <body> element improves the display speed, because script interpretation slows down the display.-->
+        <p>All rights reserved</p>
+    </footer>
+
+
+
+    <!--Placing scripts at the bottom of the <body> element improves the display speed, because script interpretation slows down the display.-->
     <!--jquery CDN-->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -103,7 +151,6 @@
     <!--this bit is the firebase CDN you need them both...i think-->
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-
 </body>
 
 </html>

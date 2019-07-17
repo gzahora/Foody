@@ -11,7 +11,7 @@ $(document).ready(function () {
     function pantryButtons() {
         $("#pantry-buttons").empty();
         for (var i = 0; i < pantry.length; i++) {
-            $("#pantry-buttons").append("<button class='btn btn-danger m-2 pantryButton' data-name='" + pantry[i] + "'>" + pantry[i] + "</button>");
+            $("#pantry-buttons").append("<button class='btn btn-info m-2 pantryButton' data-name='" + pantry[i] + "'>" + pantry[i] + "</button>");
         }
     };
 
@@ -65,7 +65,8 @@ $(document).ready(function () {
         var queryURL = "https://api.edamam.com/search?q=" + meal + "&app_id=b9932fef&app_key=351d24d69e849db0f8fe16f88161a9e7&from=0&to=8";
         console.log(queryURL);
 
-//----------------------Ajax call for Edamam API----------------------------------------------------------------------------------------------------------
+
+        //Ajax call for Edamam API
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -133,6 +134,13 @@ $(document).ready(function () {
         $("#recipeDisplay").append(recipeList[pointer]);
         $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
 
+<<<<<<< HEAD
+    })
+
+    pantryButtons();
+
+})
+=======
 //---------------------Ajax call for Youtube API--------------------------------------------------------------------------------------------------------------------
 
 
@@ -140,3 +148,4 @@ $(document).ready(function () {
     });
         pantryButtons();
 });
+>>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
