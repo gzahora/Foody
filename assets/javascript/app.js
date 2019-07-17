@@ -134,13 +134,6 @@ $(document).ready(function () {
         $("#recipeDisplay").append(recipeList[pointer]);
         $("#recipeDisplay").append("<button class='btn btn-light' id='next'>&#x2192</button>");
 
-<<<<<<< HEAD
-    })
-
-    pantryButtons();
-
-})
-=======
 //---------------------Ajax call for Youtube API--------------------------------------------------------------------------------------------------------------------
 
 
@@ -148,4 +141,3 @@ $(document).ready(function () {
     });
         pantryButtons();
 });
->>>>>>> 941dde3c60655c35b5220bad01d5ec76037d055f
