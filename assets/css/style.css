@@ -1,7 +1,3 @@
-body, 
-html {
-  height:100%;
-}
 body{
   background-image: url("../images/jumbotronimage.jpeg");
   background-repeat: no-repeat;
@@ -40,7 +36,6 @@ body{
 #recipeDisplay{
   margin-bottom: 80px;
 }
-#next,
 #prev {
   width:3em;
   border-radius: 1em;
