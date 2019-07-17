@@ -6,25 +6,26 @@ body{
   background-image: url("../images/jumbotronimage.jpeg");
 
 }
-.jumbotron{
+.head {
   background-color: rgb(46, 102, 46);
-  background-position: 100%;
-  background-repeat: no-repeat; 
-  background-size: cover; 
   color:white;
-  font-style:bold;
-  font-family: 'Squada One';
+  font-style:bolder;
+  font-family: 'Indie Flower', cursive;
 
 }
-#footer{
-text-align: center;
-color:black;
+.myFooter{
+  background-color: rgb(46, 102, 46);
+  color:white;
+  text-align: center;
+  bottom:0;
+  width:100%;
 }
-.card1{
+.myPantry{
   background-color:rgb(84, 190, 84, 0.3);
   color:white;
   font-style: bolder;
-  font-size:18px;
+  font-family: 'Indie Flower', cursive;
+  font-size:20px;
 }
 #delete-from-fridge{
   float: right;
@@ -33,7 +34,9 @@ color:black;
   height: 3em;
   background:red;
 }
-
+#recipeDisplay{
+  margin-bottom: 80px;
+}
 #next,
 #prev {
   width:3em;
