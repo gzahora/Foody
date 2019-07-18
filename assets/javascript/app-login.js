@@ -20,7 +20,7 @@ $(document).ready(function () {
     // populates the display with play and scoreboard options
 
     function goToPage() {
-        window.open("index.html", "_self")
+        window.open("dashboard.html", "_self")
     };
 
     function inError(message) {
@@ -60,6 +60,7 @@ $(document).ready(function () {
                             if (sv[i].password === inputPwd) {
                                 console.log("right answer")
                                 player = inputName;
+                                goToPage();
                                 break
                             }
                             else {
@@ -72,7 +73,7 @@ $(document).ready(function () {
                         inError("incorrect user")
                     }
                     else {
-                        goToPage();
+                  
                     }
                 });
             })

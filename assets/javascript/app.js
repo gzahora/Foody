@@ -11,7 +11,7 @@ $(document).ready(function () {
     function pantryButtons() {
         $("#pantry-buttons").empty();
         for (var i = 0; i < pantry.length; i++) {
-            $("#pantry-buttons").append("<button class='btn btn-info m-2 pantryButton' data-name='" + pantry[i] + "'>" + pantry[i] + "</button>");
+            $("#pantry-buttons").append("<button class='btn btn-info m-2 pantryButton btn-danger' data-name='" + pantry[i] + "'>" + pantry[i] + "</button>");
         }
     };
 

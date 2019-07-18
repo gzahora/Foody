@@ -1,20 +1,29 @@
-body{
+.bg{
   background-image: url("../images/jumbotronimage.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  padding-top: 2em;
+  padding-bottom: 2em ;
+  min-height: 73%
 }
-.container {
+body,html {
+  height: 100%;
+}
+
+.jumbotron {
+  font-family: 'Indie Flower', cursive;
+}
+
+.container-centered {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.btn {
-  width: 8em;
-  border-radius: 2em;
-  margin: 0.25em;
+.green {
+  background: rgb(46, 102, 46);
+  color: white;
 }
+
 h3 {
   margin: 0px;
 }
@@ -29,24 +38,13 @@ h2 {
 h4 {
   margin:0px;
 }
-#return {
-  width: auto;
-}
-#game-moves {
-  padding: 0.5em;
-}
-#rock, #paper, #scissors {
-  margin:0.25em;
-}
-#play-start-button{
-  width: auto;
-}
+
 .myFooter{
   background-color: rgb(46, 102, 46);
   color:white;
   text-align: center;
-  bottom:0;
   width:100%;
+  margin-bottom:0px; 
 }
 .myPantry{
   background-color:rgb(84, 190, 84, 0.3);
@@ -54,6 +52,10 @@ h4 {
   font-style: bolder;
   font-family: 'Indie Flower', cursive;
   font-size:20px;
+}
+#credits {
+  padding: 0px;
+  margin-bottom:0px; 
 }
 #delete-from-fridge{
   float: right;
@@ -74,4 +76,12 @@ h4 {
 }
 #recipeDisplay {
   background-color:rgb(84, 190, 84, 0.3);
+}
+
+#login,
+#signup,
+#visitor{
+  width: 7em;
+  margin: 0.5em;
+  border-radius: 1em;
 }
