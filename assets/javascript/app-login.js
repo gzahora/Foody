@@ -20,7 +20,7 @@ $(document).ready(function () {
     // populates the display with play and scoreboard options
 
     function goToPage() {
-        window.open("index.html", "_self")
+        window.open("dashboard.html", "_self")
     };
 
     function inError(message) {

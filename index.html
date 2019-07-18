@@ -12,85 +12,25 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--own style.css link-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- google fonts and favicon -->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/images/favicon.png" />
-    <title>Foody</title>
+    <title>Document</title>
 </head>
 
-<body>
-
-    <div class="jumbotron m-0 green p-1">
-        <div class="container">
-            <h1 class="display-4">Foody</h1>
+<body class="bg-success">
+    <div class="container container-centered">
+        <div class="card text-center">
+            <div class="card-body" id="game-display"></div>
         </div>
     </div>
-
-    <div class="container-fluid bg ">
-        <div class="row">
-            <div class="col-6">
-                <div class="card myPantry">
-                    <div class="card-body">
-                        <h5 class="card-title">My Pantry</h5>
-                        <div id="pantry-buttons">
-                        </div>
-                        <label>Add an item to the pantry : </label>
-                        <br>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Item" val="">
-                            <div class="input-group-append">
-                                <button class="btn btn-success" id="add-button">+</button>
-                            </div>
-                        </div>
-                        <table class="table text-white">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Ingredients</th>
-                                </tr>
-                            </thead>
-                            <tbody id="ing-to-cook">
-                            </tbody>
-                        </table>
-                        <div id="musicDisplay"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="row">
-                    <div class="col">
-                        <div class="card recipies">
-                            <div class="card-body">
-                                <button class="btn btn-lg btn-danger" id="findRecipe">Lets Cook!</button>
-                                <br>
-                                <br>
-                                <div class="d-flex justify-content-around" id="recipeDisplay"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="page-footer text-center green p-4">
-        Greg Zahora Pamir Jantaev Lucas Foulkes Aida Yrysbekova
-        <br>
-        Copyright 2019
-        <br>
-        All rights reserved
-    </footer>
-
 
     <!--Placing scripts at the bottom of the <body> element improves the display speed, because script interpretation slows down the display.-->
     <!--jquery CDN-->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!--my own js-->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/app-login.js"></script>
     <!--this bit is the firebase CDN you need them both...i think-->
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-
 </body>
 
 </html>

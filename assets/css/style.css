@@ -73,3 +73,11 @@ h4 {
 #recipeDisplay {
   background-color:rgb(84, 190, 84, 0.3);
 }
+
+#login,
+#signup,
+#visitor{
+  width: 7em;
+  margin: 0.5em;
+  border-radius: 1em;
+}
