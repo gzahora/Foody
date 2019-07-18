@@ -65,7 +65,7 @@ $(document).ready(function () {
         var queryURL = "https://api.edamam.com/search?q=" + meal + "&app_id=b9932fef&app_key=351d24d69e849db0f8fe16f88161a9e7&from=0&to=8";
         console.log(queryURL);
 
-
+        recipeList = [];
         //Ajax call for Edamam API
         $.ajax({
             url: queryURL,
