@@ -60,6 +60,7 @@ $(document).ready(function () {
                             if (sv[i].password === inputPwd) {
                                 console.log("right answer")
                                 player = inputName;
+                                goToPage();
                                 break
                             }
                             else {
@@ -72,7 +73,7 @@ $(document).ready(function () {
                         inError("incorrect user")
                     }
                     else {
-                        goToPage();
+                  
                     }
                 });
             })

@@ -3,10 +3,14 @@
   background-repeat: no-repeat;
   padding-top: 2em;
   padding-bottom: 2em ;
-  min-height: 66%
+  min-height: 73%
 }
 body,html {
   height: 100%;
+}
+
+.jumbotron {
+  font-family: 'Indie Flower', cursive;
 }
 
 .container-centered {
