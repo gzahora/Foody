@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 
 
-    //on click to take "meal" and insert them as ingredients into the query search
+    //on click to start both the edamam ajax call and youtube ajax call
     $(document).on("click", "#findRecipe", function () {
         $("#recipeDisplay").empty();
         var queryURL = "https://api.edamam.com/search?q=" + meal + "&app_id=b9932fef&app_key=351d24d69e849db0f8fe16f88161a9e7&from=0&to=8";
@@ -82,24 +82,30 @@ $(document).ready(function () {
             console.log(pointer);
         });
 
+        //Ajax call for Youtube API
         $("#musicDisplay").empty();
 
+        var playlist = ["top hits", "cooking songs", "upbeat"];
+
         var youtubeKey = "AIzaSyBAfUGa2aYPYpeGNqgvVZobAK1o3OkK5fc";
-        var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + meal + ",songs&type=video&videoCategoryId=10&videoCategoryId=song&type=video&key=" + youtubeKey;
-        console.log(youtubeURL);  
+
+        var randomSong = playlist[Math.floor(Math.random()*playlist.length)];
+
+        var youtubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q='" + randomSong + "'&type=video&videoCategoryId=10&videoCategoryId=song&type=video&key=" + youtubeKey;
+    
+
+        console.log(youtubeURL);
+        console.log("cooking Theme: " + playlist);
 
         $.ajax({
             url: youtubeURL,
             method: "GET"
         }).then(function (action) {
             console.log(action);
-            
 
-            
-
+        
+            //embed music player into the html when added
             var musicPlayer = $("<iframe width='420' height='315' src=https://www.youtube.com/embed/" + action.items[0].id.videoId + "?playlist=" + action.items[0].id.videoId + "&loop=1></iframe>")
-            
-               
                 $("#musicDisplay").append(musicPlayer);
             
    
